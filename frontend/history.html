@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History | LocalShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="main-nav"></nav>
+
+    <main class="container" style="padding: 4rem 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 style="font-weight: 800;">Order History</h1>
+            <a href="products.html" class="btn btn-outline" style="font-size: 0.85rem;">Continue Shopping</a>
+        </div>
+
+        <div id="history-container">
+            <!-- Dynamically populated -->
+        </div>
+
+        <div id="empty-history" class="empty-state" style="display: none;">
+            <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                style="margin-bottom: 1rem; opacity: 0.5;">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h3>No orders yet</h3>
+            <p>Your purchase history will appear here once you place an order.</p>
+        </div>
+    </main>
+
+    <footer id="main-footer"></footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/history.js"></script>
+</body>
+
+</html>

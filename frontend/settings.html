@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | LocalShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="main-nav"></nav>
+
+    <main class="container" style="padding: 4rem 1.5rem;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h1 style="font-weight: 800; margin-bottom: 2.5rem;">Settings</h1>
+
+            <div
+                style="background: var(--bg-white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden;">
+                <!-- Theme Toggle -->
+                <div
+                    style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h4 style="margin-bottom: 0.25rem;">Dark Mode</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Adjust the appearance of the app.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <!-- Notification Toggle -->
+                <div
+                    style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h4 style="margin-bottom: 0.25rem;">Push Notifications</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Receive alerts about order status.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="notif-toggle" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <!-- Language Selection -->
+                <div style="padding: 1.5rem; border-bottom: 1px solid var(--border-color);">
+                    <h4 style="margin-bottom: 1rem;">Language</h4>
+                    <select id="lang-select" class="form-input">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+
+                <!-- Save Button -->
+                <div style="padding: 1.5rem; background: #f8fafc; text-align: right;">
+                    <button id="save-settings-btn" class="btn btn-primary">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        /* Simple Switch Style */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: var(--primary);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Dark Theme Variables Placeholder */
+        body.dark-mode {
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark-mode .container>div,
+        body.dark-mode nav,
+        body.dark-mode div[style*="background: var(--bg-white)"] {
+            background-color: #1e293b !important;
+            border-color: #334155 !important;
+        }
+    </style>
+
+    <footer id="main-footer"></footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+
+</html>
